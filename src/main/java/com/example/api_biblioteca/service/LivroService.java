@@ -69,4 +69,10 @@ public class LivroService {
         Livro attLivro = livroRepository.save(livro);
         return convertLivroParaResponse(attLivro);
     }
+
+    public void deletarLivro(Long idLivro){
+        Livro livro = livroRepository.findById(idLivro)
+                .orElseThrow(() -> new RuntimeException("Não foi possivel deletar esse" + idLivro));
+        livroRepository.delete(livro);
+    }
 }
