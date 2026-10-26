@@ -26,7 +26,7 @@ public class Livro {
     private Integer anoPublicado;
 
     @Column(nullable = false)
-    private Integer QtDisponivel;
+    private Integer qtDisponivel;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_autor", nullable = false)

@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.util.List;
 
+@Table(name = " TbAutor")
 @Entity
 @Getter @Setter
 @NoArgsConstructor
